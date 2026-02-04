@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: #1a1d23; color: white; display: flex; justify-content: center; padding: 40px 20px; }
+
+.todo-app { width: 100%; max-width: 600px; background: #242933; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+header { background: linear-gradient(to right, #1e40af, #3b82f6); padding: 30px; text-align: center; }
+header h1 { font-size: 24px; letter-spacing: 1px; }
+header p { font-size: 14px; opacity: 0.8; margin-top: 5px; }
+
+.container { padding: 25px; }
+
+.input-group { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid #3f4451; padding-bottom: 25px; }
+
+input[type="text"] { flex: 1; background: #2d333f; border: 1px solid #3f4451; padding: 12px 15px; border-radius: 8px; color: white; outline: none; }
+
+button#add-btn { background: #e11d48; color: white; border: none; padding: 0 25px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+button#add-btn:hover { background: #be123c; }
+
+ul { list-style: none; }
+
+li { background: #2d333f; padding: 15px; border-radius: 12px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; border: 1px solid #4b5563; }
+
+input[type="checkbox"] { width: 20px; height: 20px; accent-color: #e11d48; cursor: pointer; }
+
+.text-content { flex: 1; font-size: 16px; transition: 0.3s; word-break: break-all; }
+.completed .text-content { text-decoration: line-through; opacity: 0.5; }
+
+.action-btns { display: flex; gap: 12px; }
+.action-btns button { background: none; border: none; cursor: pointer; font-size: 14px; font-weight: bold; transition: 0.3s; }
+.action-btns .edit-btn { color: #3b82f6; }
+.action-btns .delete-btn { color: #ef4444; }
+.action-btns button:hover { opacity: 0.7; transform: scale(1.05); }
+
+.footer-stats { display: flex; justify-content: space-between; margin-top: 20px; font-size: 13px; color: #9ca3af; padding-top: 15px; border-top: 1px solid #3f4451; }
+
+/* Responsive Rules */
+@media (max-width: 480px) {
+    .input-group { flex-direction: column; }
+    button#add-btn { padding: 12px; }
+}
